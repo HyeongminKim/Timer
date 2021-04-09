@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8614ED4126202A5D00945468 /* ContentView.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8614ED4326202A5D00945468 /* ContentView.strings */; };
+		8619B2FC244311E000BB4A76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8619B2FB244311E000BB4A76 /* Assets.xcassets */; };
+		8619B2FF244311E000BB4A76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8619B2FE244311E000BB4A76 /* Preview Assets.xcassets */; };
+		8619B302244311E000BB4A76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8619B300244311E000BB4A76 /* Main.storyboard */; };
+		8696AB62244582BB006AA91C /* ClockSound3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8696AB5D244582B3006AA91C /* ClockSound3.mp3 */; };
+		8696AB63244582BB006AA91C /* ClockSound2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8696AB5E244582B5006AA91C /* ClockSound2.mp3 */; };
+		8696AB64244582BB006AA91C /* ClockSound1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8696AB5F244582B7006AA91C /* ClockSound1.mp3 */; };
+		8696AB65244582BB006AA91C /* CountDown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8696AB60244582B9006AA91C /* CountDown.mp3 */; };
+		8696AB66244582BB006AA91C /* TimeOver1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8696AB61244582BB006AA91C /* TimeOver1.mp3 */; };
+		86DA8B162445A4440092184C /* TimeOver2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 86DA8B152445A4430092184C /* TimeOver2.mp3 */; };
+		D058231E3719B6A0D5D7F214 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05612B2B1C5DE525FDB464F /* Utility.swift */; };
+		D05823A230E03C1DAEEA3AA4 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05337FDB9CFEE0EF3651F3D /* AudioController.swift */; };
+		D05A779F84A1F6F86E3538D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E02D57BD3D2F4AD86E2DE /* ContentView.swift */; };
+		D05BC5E37CA420ECE9C69319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05916FDA0EBF6C504830307 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8614ED4226202A5D00945468 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ContentView.strings; sourceTree = "<group>"; };
+		8614ED4526202A6D00945468 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/ContentView.strings; sourceTree = "<group>"; };
+		8619B2F4244311DE00BB4A76 /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8619B2FB244311E000BB4A76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8619B2FE244311E000BB4A76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8619B301244311E000BB4A76 /* Base */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8619B303244311E000BB4A76 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8619B304244311E000BB4A76 /* Timer.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Timer.entitlements; sourceTree = "<group>"; };
+		8696AB5D244582B3006AA91C /* ClockSound3.mp3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = audio.mp3; path = ClockSound3.mp3; sourceTree = "<group>"; };
+		8696AB5E244582B5006AA91C /* ClockSound2.mp3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = audio.mp3; path = ClockSound2.mp3; sourceTree = "<group>"; };
+		8696AB5F244582B7006AA91C /* ClockSound1.mp3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = audio.mp3; path = ClockSound1.mp3; sourceTree = "<group>"; };
+		8696AB60244582B9006AA91C /* CountDown.mp3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = audio.mp3; path = CountDown.mp3; sourceTree = "<group>"; };
+		8696AB61244582BB006AA91C /* TimeOver1.mp3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = audio.mp3; path = TimeOver1.mp3; sourceTree = "<group>"; };
+		86D32E51262027C700878504 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		86DA8B152445A4430092184C /* TimeOver2.mp3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = audio.mp3; path = TimeOver2.mp3; sourceTree = "<group>"; };
+		D05337FDB9CFEE0EF3651F3D /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		D05612B2B1C5DE525FDB464F /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		D05916FDA0EBF6C504830307 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D05E02D57BD3D2F4AD86E2DE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8619B2F1244311DE00BB4A76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8619B2EB244311DE00BB4A76 = {
+			isa = PBXGroup;
+			children = (
+				8619B2F6244311DE00BB4A76 /* Timer */,
+				8619B2F5244311DE00BB4A76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8619B2F5244311DE00BB4A76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8619B2F4244311DE00BB4A76 /* Timer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8619B2F6244311DE00BB4A76 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				8619B2FB244311E000BB4A76 /* Assets.xcassets */,
+				8619B300244311E000BB4A76 /* Main.storyboard */,
+				8619B303244311E000BB4A76 /* Info.plist */,
+				8619B304244311E000BB4A76 /* Timer.entitlements */,
+				8696AB6724459135006AA91C /* Sounds */,
+				8619B2FD244311E000BB4A76 /* Preview Content */,
+				D0588F30749D08591B6989DA /* Resource */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		8619B2FD244311E000BB4A76 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8619B2FE244311E000BB4A76 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8696AB6724459135006AA91C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8696AB5F244582B7006AA91C /* ClockSound1.mp3 */,
+				8696AB5E244582B5006AA91C /* ClockSound2.mp3 */,
+				8696AB5D244582B3006AA91C /* ClockSound3.mp3 */,
+				8696AB60244582B9006AA91C /* CountDown.mp3 */,
+				8696AB61244582BB006AA91C /* TimeOver1.mp3 */,
+				86DA8B152445A4430092184C /* TimeOver2.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		D0573CD567B6570DE8FC763D /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8614ED4326202A5D00945468 /* ContentView.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		D0588F30749D08591B6989DA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D05FC8534C585EB02B6E31B4 /* Scripts */,
+				D0573CD567B6570DE8FC763D /* Localization */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D05FC8534C585EB02B6E31B4 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				D05E02D57BD3D2F4AD86E2DE /* ContentView.swift */,
+				D05916FDA0EBF6C504830307 /* AppDelegate.swift */,
+				D05612B2B1C5DE525FDB464F /* Utility.swift */,
+				D05337FDB9CFEE0EF3651F3D /* AudioController.swift */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8619B2F3244311DE00BB4A76 /* Timer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8619B307244311E000BB4A76 /* Build configuration list for PBXNativeTarget "Timer" */;
+			buildPhases = (
+				8619B2F0244311DE00BB4A76 /* Sources */,
+				8619B2F1244311DE00BB4A76 /* Frameworks */,
+				8619B2F2244311DE00BB4A76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Timer;
+			productName = Timer;
+			productReference = 8619B2F4244311DE00BB4A76 /* Timer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8619B2EC244311DE00BB4A76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = HM;
+				TargetAttributes = {
+					8619B2F3244311DE00BB4A76 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 8619B2EF244311DE00BB4A76 /* Build configuration list for PBXProject "Timer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ko,
+			);
+			mainGroup = 8619B2EB244311DE00BB4A76;
+			productRefGroup = 8619B2F5244311DE00BB4A76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8619B2F3244311DE00BB4A76 /* Timer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8619B2F2244311DE00BB4A76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8619B302244311E000BB4A76 /* Main.storyboard in Resources */,
+				8696AB62244582BB006AA91C /* ClockSound3.mp3 in Resources */,
+				8696AB65244582BB006AA91C /* CountDown.mp3 in Resources */,
+				8619B2FF244311E000BB4A76 /* Preview Assets.xcassets in Resources */,
+				8696AB64244582BB006AA91C /* ClockSound1.mp3 in Resources */,
+				8696AB66244582BB006AA91C /* TimeOver1.mp3 in Resources */,
+				8619B2FC244311E000BB4A76 /* Assets.xcassets in Resources */,
+				8696AB63244582BB006AA91C /* ClockSound2.mp3 in Resources */,
+				86DA8B162445A4440092184C /* TimeOver2.mp3 in Resources */,
+				8614ED4126202A5D00945468 /* ContentView.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8619B2F0244311DE00BB4A76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05A779F84A1F6F86E3538D8 /* ContentView.swift in Sources */,
+				D05BC5E37CA420ECE9C69319 /* AppDelegate.swift in Sources */,
+				D058231E3719B6A0D5D7F214 /* Utility.swift in Sources */,
+				D05823A230E03C1DAEEA3AA4 /* AudioController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8614ED4326202A5D00945468 /* ContentView.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8614ED4226202A5D00945468 /* en */,
+				8614ED4526202A6D00945468 /* ko */,
+			);
+			name = ContentView.strings;
+			sourceTree = "<group>";
+		};
+		8619B300244311E000BB4A76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8619B301244311E000BB4A76 /* Base */,
+				86D32E51262027C700878504 /* ko */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8619B305244311E000BB4A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8619B306244311E000BB4A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8619B308244311E000BB4A76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Timer/Timer.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8WV5TPYB24;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Timer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.greengeckogames.Timer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8619B309244311E000BB4A76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Timer/Timer.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
+				DEVELOPMENT_TEAM = 8WV5TPYB24;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Timer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.greengeckogames.Timer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8619B2EF244311DE00BB4A76 /* Build configuration list for PBXProject "Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8619B305244311E000BB4A76 /* Debug */,
+				8619B306244311E000BB4A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8619B307244311E000BB4A76 /* Build configuration list for PBXNativeTarget "Timer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8619B308244311E000BB4A76 /* Debug */,
+				8619B309244311E000BB4A76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8619B2EC244311DE00BB4A76 /* Project object */;
+}

@@ -1,0 +1,28 @@
+/****************************************************************************/
+/* Localization file */
+
+"Timer set" = "타이머 설정";
+"h" = "시";
+"m" = "분";
+"s" = "초";
+"ETA: " = "ETA: ";
+"N/A" = "알 수 없음";
+"Silent count" = "무음 카운트";
+"Start" = "시작";
+"Reset" = "초기화";
+"Choose Sounds..." = "사운드 선택...";
+
+"Timer start" = "타이머 시작";
+"Timer done" = "타이머 완료";
+"Stop" = "정지";
+"Back" = "이전";
+"Pause" = "일시 정지";
+
+"Choose Sounds" = "사운드 선택";
+"Normal Count" = "일반 카운트";
+"1 min less" = "1 분 미만";
+"30 sec less" = "30 초 미만";
+"10 sec less" = "10 초 미만";
+"Timer End Default" = "기본 타이머 종료";
+"Timer End Simple" = "간략한 타이머 종료";
+"OK" = "승인";

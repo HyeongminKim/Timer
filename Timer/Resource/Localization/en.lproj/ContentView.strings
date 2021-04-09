@@ -1,0 +1,28 @@
+/****************************************************************************/
+/* Localization file */
+
+"Timer set" = "Timer set";
+"h" = "h";
+"m" = "m";
+"s" = "s";
+"ETA: " = "ETA: ";
+"N/A" = "N/A";
+"Silent count" = "Silent count";
+"Start" = "Start";
+"Reset" = "Reset";
+"Choose Sounds..." = "Choose Sounds...";
+
+"Timer start" = "Timer start";
+"Timer done" = "Timer done";
+"Stop" = "Stop";
+"Back" = "Back";
+"Pause" = "Pause";
+
+"Choose Sounds" = "Choose Sounds";
+"Normal Count" = "Normal Count";
+"1 min less" = "1 min less";
+"30 sec less" = "30 sec less";
+"10 sec less" = "10 sec less";
+"Timer End Default" = "Timer End Default";
+"Timer End Simple" = "Timer End Simple";
+"OK" = "OK";

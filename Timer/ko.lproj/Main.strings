@@ -1,0 +1,42 @@
+
+/* Class = "NSMenuItem"; title = "Timer"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Timer";
+
+/* Class = "NSMenuItem"; title = "Quit Timer"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Timer 종료";
+
+/* Class = "NSMenuItem"; title = "About Timer"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Timer에 관하여";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "메인 메뉴";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "모두 보이기";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "모두 앞으로 가져오기";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "최소화";
+
+/* Class = "NSMenuItem"; title = "Hide Timer"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Timer 가리기";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "최대화";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "윈도우";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "기타 가리기";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "윈도우";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "khU-PI-Lcn"; */
+"khU-PI-Lcn.title" = "닫기";
+
+/* Class = "NSMenu"; title = "Timer"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Timer";
