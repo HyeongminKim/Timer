@@ -83,15 +83,15 @@ struct ContentView: View {
                             }
                             startTime -= 1
                             if startTime == 0 {
-                                !muteSound ? AudioController.shared.controlAudio(source: 4, enable: true) : AudioController.shared.controlAudio(source: 5, enable: true)
+                                !muteSound ? AudioController.shared.controlAudio(forKey: "basic", enable: true) : AudioController.shared.controlAudio(forKey: "simple", enable: true)
                             } else if startTime <= 10 {
-                                AudioController.shared.controlAudio(source: 3, enable: !muteSound)
+                                AudioController.shared.controlAudio(forKey: "countDown", enable: !muteSound)
                             } else if startTime <= 30 {
-                                AudioController.shared.controlAudio(source: 2, enable: !muteSound)
+                                AudioController.shared.controlAudio(forKey: "imminent", enable: !muteSound)
                             } else if startTime <= 60 {
-                                AudioController.shared.controlAudio(source: 1, enable: !muteSound)
+                                AudioController.shared.controlAudio(forKey: "approach", enable: !muteSound)
                             } else {
-                                AudioController.shared.controlAudio(source: 0, enable: !muteSound)
+                                AudioController.shared.controlAudio(forKey: "normal", enable: !muteSound)
                             }
                         })
                     }, label: { Text("Start".localized()) }).disabled(startTime == 0)
@@ -101,7 +101,7 @@ struct ContentView: View {
                         minute = 0
                         second = 0
                         pause = false
-                        AudioController.shared.controlAudio(source: nil, enable: false)
+                        AudioController.shared.controlAudio(forKey: nil, enable: false)
                     }, label: { Text("Reset".localized())}).disabled(startTime == 0)
                 }
                 HStack {
@@ -175,7 +175,7 @@ struct ContentView: View {
                         second = setTime % 60
                         timer?.invalidate()
                         now = Date()
-                        AudioController.shared.controlAudio(source: nil, enable: false)
+                        AudioController.shared.controlAudio(forKey: nil, enable: false)
                     }, label: { startTime != 0 ? Text("Stop".localized()) : Text("Back".localized()) })
                     Button(action: {
                         setTimer = false
@@ -185,7 +185,7 @@ struct ContentView: View {
                         second = startTime % 60
                         timer?.invalidate()
                         now = Date()
-                        AudioController.shared.controlAudio(source: nil, enable: false)
+                        AudioController.shared.controlAudio(forKey: nil, enable: false)
                     }, label: { Text("Pause".localized()) }).disabled(startTime == 0)
                     Button(action: {
                         setTimer = false
@@ -195,7 +195,7 @@ struct ContentView: View {
                         startTime = 0
                         pause = false
                         timer?.invalidate()
-                        AudioController.shared.controlAudio(source: nil, enable: false)
+                        AudioController.shared.controlAudio(forKey: nil, enable: false)
                     }, label: { Text("Reset".localized()) })
                 }
                 .padding()

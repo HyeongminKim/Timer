@@ -38,21 +38,21 @@ class AudioController {
         }
     }
 
-    public func controlAudio(source: Int?, enable: Bool) {
+    public func controlAudio(forKey: String?, enable: Bool) {
         if (isAudioSourceEmpty()) { return }
 
-        switch source {
-        case 0: do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "normal")!) } catch { NSLog("No audio source.") }
-        case 1: do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "approach")!) } catch { NSLog("No audio source.") }
-        case 2: do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "imminent")!) } catch { NSLog("No audio source.") }
-        case 3:
+        switch forKey {
+        case "normal": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "normal")!) } catch { NSLog("No audio source.") }
+        case "approach": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "approach")!) } catch { NSLog("No audio source.") }
+        case "imminent": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "imminent")!) } catch { NSLog("No audio source.") }
+        case "countDown":
             do {
                 sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "countDown")!)
                 sound.currentTime = 7
             } catch { NSLog("No audio source.") }
-        case 4: do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "basic")!) } catch { NSLog("No audio source.") }
-        case 5: do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "simple")!) } catch { NSLog("No audio source.") }
-        default: if !enable { sound.stop() } else { NSLog("Audio not imported: \(source!)") }
+        case "basic": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "basic")!) } catch { NSLog("No audio source.") }
+        case "simple": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "simple")!) } catch { NSLog("No audio source.") }
+        default: if !enable { sound.stop() } else { NSLog("Audio not imported: \(forKey!)") }
         }
         if enable {
             if sound.isPlaying { sound.stop() }
