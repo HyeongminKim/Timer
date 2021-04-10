@@ -14,8 +14,8 @@
 - Thank you for your contribution. There are two files to be localized: `Main.storyboard` and `ContentView.swift`.
 
 ### App screenshot
-<img width="357" alt="스크린샷 2021-04-10 14 48 05" src="https://user-images.githubusercontent.com/25660580/114273711-2eebc380-9a56-11eb-829c-f0b17fff250f.png">
-<img width="492" alt="스크린샷 2021-04-11 00 08 16" src="https://user-images.githubusercontent.com/25660580/114274578-11205d80-9a5a-11eb-8d00-64b1a4011846.png">
+<img width="357" alt="스크린샷 2021-04-11 00 23 31" src="https://user-images.githubusercontent.com/25660580/114275276-e08df300-9a5c-11eb-86ce-cef24d05864a.png">
+<img width="492" alt="스크린샷 2021-04-11 00 23 37" src="https://user-images.githubusercontent.com/25660580/114275281-e5eb3d80-9a5c-11eb-8f49-124f06cfee1f.png">
 
 ### License
 This work is licensed under a [MIT License](https://github.com/HyeongminKim/Timer/blob/master/LICENSE)
