@@ -49,6 +49,7 @@ class AudioController {
         case "approach": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "approach")!) } catch { NSLog("No audio source.") }
         case "imminent": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "imminent")!) } catch { NSLog("No audio source.") }
         case "info": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "info")!) } catch { NSLog("No audio source.") }
+        case "caution": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "caution")!) } catch { NSLog("No audio source.") }
         case "warning": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "warning")!) } catch { NSLog("No audio source.") }
         case "basic": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "basic")!) } catch { NSLog("No audio source.") }
         case "simple": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "simple")!) } catch { NSLog("No audio source.") }
@@ -66,6 +67,7 @@ class AudioController {
         getAudioSource(forKey: "approach")?.path.isEmpty ?? true ||
         getAudioSource(forKey: "imminent")?.path.isEmpty ?? true ||
         getAudioSource(forKey: "info")?.path.isEmpty ?? true ||
+        getAudioSource(forKey: "caution")?.path.isEmpty ?? true ||
         getAudioSource(forKey: "warning")?.path.isEmpty ?? true ||
         getAudioSource(forKey: "simple")?.path.isEmpty ?? true
     }

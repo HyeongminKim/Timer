@@ -85,7 +85,7 @@ struct ContentView: View {
                             if startTime % 2 == 0 && (62 > startTime && startTime > 54) {
                                 AudioController.shared.controlAudio(forKey: "info", enable: !muteSound)
                             } else if startTime % 2 == 0 && (32 > startTime && startTime > 24) {
-                                AudioController.shared.controlAudio(forKey: "info", enable: !muteSound)
+                                AudioController.shared.controlAudio(forKey: "caution", enable: !muteSound)
                             } else if startTime % 2 == 0 && (12 > startTime && startTime > 4) {
                                 AudioController.shared.controlAudio(forKey: "warning", enable: !muteSound)
                             } else if startTime == 0 {
@@ -124,7 +124,8 @@ struct ContentView: View {
                             }
                             Text("Alert Sound".localized())
                             Group {
-                                chooseSounds(forKey: "info", sourceBtn: "0.5, 1 min")
+                                chooseSounds(forKey: "info", sourceBtn: "1 min")
+                                chooseSounds(forKey: "caution", sourceBtn: "30 sec")
                                 chooseSounds(forKey: "warning", sourceBtn: "10 sec")
                             }
                             Text("Timer End Sound".localized())
@@ -136,7 +137,7 @@ struct ContentView: View {
                             Button(action: {
                                 sheetIsShowing = false
                             }, label: { Text("OK".localized()) })
-                        }.padding().frame(width: 380, height: 400)
+                        }.padding().frame(width: 380, height: 420)
                     }
                 }
                 .padding()
