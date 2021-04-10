@@ -45,11 +45,8 @@ class AudioController {
         case "normal": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "normal")!) } catch { NSLog("No audio source.") }
         case "approach": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "approach")!) } catch { NSLog("No audio source.") }
         case "imminent": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "imminent")!) } catch { NSLog("No audio source.") }
-        case "countDown":
-            do {
-                sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "countDown")!)
-                sound.currentTime = 7
-            } catch { NSLog("No audio source.") }
+        case "info": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "info")!) } catch { NSLog("No audio source.") }
+        case "warning": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "warning")!) } catch { NSLog("No audio source.") }
         case "basic": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "basic")!) } catch { NSLog("No audio source.") }
         case "simple": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "simple")!) } catch { NSLog("No audio source.") }
         default: if !enable { sound.stop() } else { NSLog("Audio not imported: \(forKey!)") }
@@ -62,8 +59,12 @@ class AudioController {
     }
 
     public func isAudioSourceEmpty() -> Bool {
-        getAudioSource(forKey: "normal")?.path.isEmpty ?? true || getAudioSource(forKey: "approach")?.path.isEmpty ?? true || getAudioSource(forKey: "imminent")?.path.isEmpty ?? true ||
-                getAudioSource(forKey: "countDown")?.path.isEmpty ?? true || getAudioSource(forKey: "basic")?.path.isEmpty ?? true || getAudioSource(forKey: "simple")?.path.isEmpty ?? true
+        getAudioSource(forKey: "normal")?.path.isEmpty ?? true ||
+        getAudioSource(forKey: "approach")?.path.isEmpty ?? true ||
+        getAudioSource(forKey: "imminent")?.path.isEmpty ?? true ||
+        getAudioSource(forKey: "info")?.path.isEmpty ?? true ||
+        getAudioSource(forKey: "warning")?.path.isEmpty ?? true ||
+        getAudioSource(forKey: "simple")?.path.isEmpty ?? true
     }
 
     public func isAudioSourceEmpty(forKey: String) -> Bool {

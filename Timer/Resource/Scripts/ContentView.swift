@@ -82,13 +82,17 @@ struct ContentView: View {
                                 return
                             }
                             startTime -= 1
-                            if startTime == 0 {
+                            if startTime % 2 == 0 && (62 > startTime && startTime > 54) {
+                                AudioController.shared.controlAudio(forKey: "info", enable: !muteSound)
+                            } else if startTime % 2 == 0 && (32 > startTime && startTime > 24) {
+                                AudioController.shared.controlAudio(forKey: "info", enable: !muteSound)
+                            } else if startTime % 2 == 0 && (12 > startTime && startTime > 4) {
+                                AudioController.shared.controlAudio(forKey: "warning", enable: !muteSound)
+                            } else if startTime == 0 {
                                 !muteSound ? AudioController.shared.controlAudio(forKey: "basic", enable: true) : AudioController.shared.controlAudio(forKey: "simple", enable: true)
-                            } else if startTime <= 10 {
-                                AudioController.shared.controlAudio(forKey: "countDown", enable: !muteSound)
-                            } else if startTime <= 30 {
+                            } else if startTime <= 3 {
                                 AudioController.shared.controlAudio(forKey: "imminent", enable: !muteSound)
-                            } else if startTime <= 60 {
+                            } else if startTime <= 30 {
                                 AudioController.shared.controlAudio(forKey: "approach", enable: !muteSound)
                             } else {
                                 AudioController.shared.controlAudio(forKey: "normal", enable: !muteSound)
@@ -112,17 +116,27 @@ struct ContentView: View {
                     }).sheet(isPresented: $sheetIsShowing, onDismiss: didDismiss) {
                         VStack {
                             Text("Choose Sounds".localized()).bold().padding().fixedSize().font(.largeTitle)
-                            chooseSounds(forKey: "normal", sourceBtn: "Normal Count")
-                            chooseSounds(forKey: "approach", sourceBtn: "1 min less")
-                            chooseSounds(forKey: "imminent", sourceBtn: "30 sec less")
-                            chooseSounds(forKey: "countDown", sourceBtn: "10 sec less")
-                            chooseSounds(forKey: "basic", sourceBtn: "End Default")
-                            chooseSounds(forKey: "simple", sourceBtn: "End Simple")
+                            Text("Timer Sound".localized())
+                            Group {
+                                chooseSounds(forKey: "normal", sourceBtn: "Normal Count")
+                                chooseSounds(forKey: "approach", sourceBtn: "30 sec below")
+                                chooseSounds(forKey: "imminent", sourceBtn: "3 sec below")
+                            }
+                            Text("Alert Sound".localized())
+                            Group {
+                                chooseSounds(forKey: "info", sourceBtn: "0.5, 1 min")
+                                chooseSounds(forKey: "warning", sourceBtn: "10 sec")
+                            }
+                            Text("Timer End Sound".localized())
+                            Group {
+                                chooseSounds(forKey: "basic", sourceBtn: "End Default")
+                                chooseSounds(forKey: "simple", sourceBtn: "End Simple")
+                            }
                             Spacer()
                             Button(action: {
                                 sheetIsShowing = false
                             }, label: { Text("OK".localized()) })
-                        }.padding().frame(width: 350, height: 350)
+                        }.padding().frame(width: 380, height: 400)
                     }
                 }
                 .padding()
@@ -139,17 +153,21 @@ struct ContentView: View {
                         Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
                     } else if 12 > startTime && startTime > 4 {
                         Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
+                    } else if 4 > startTime && startTime > 0 {
+                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
                     } else if startTime == 0 {
                         Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).background(Color.red)
                     } else {
-                        if 15 > startTime && startTime > 0 {
+                        if 10 > startTime && startTime > 0 {
                             Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.orange)
                         } else {
                             Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title)
                         }
                     }
                 } else {
-                    if 16 > startTime && startTime > 0 {
+                    if 4 > startTime && startTime > 0 {
+                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title).foregroundColor(.red)
+                    } else if 10 > startTime && startTime > 0 {
                         Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title).foregroundColor(.orange)
                     } else {
                         Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title)

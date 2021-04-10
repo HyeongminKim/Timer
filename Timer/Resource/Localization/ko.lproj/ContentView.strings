@@ -19,10 +19,14 @@
 "Pause" = "일시 정지";
 
 "Choose Sounds" = "사운드 선택";
+"Timer Sound" = "타이머 사운드";
 "Normal Count" = "일반 카운트";
-"1 min less" = "1 분 미만";
-"30 sec less" = "30 초 미만";
-"10 sec less" = "10 초 미만";
+"30 sec below" = "30초 이하";
+"3 sec below" = "3초 이하";
+"Alert Sound" = "경고 사운드";
+"0.5, 1 min" = "30초, 1분";
+"10 sec" = "10초";
+"Timer End Sound" = "타이머 종료 사운드";
 "End Default" = "기본 종료";
 "End Simple" = "간략한 종료";
 "CLR" = "비우기";
