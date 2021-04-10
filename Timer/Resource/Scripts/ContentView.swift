@@ -86,7 +86,7 @@ struct ContentView: View {
                                 AudioController.shared.controlAudio(forKey: "info", enable: !muteSound)
                             } else if startTime % 2 == 0 && (32 > startTime && startTime > 24) {
                                 AudioController.shared.controlAudio(forKey: "caution", enable: !muteSound)
-                            } else if startTime % 2 == 0 && (12 > startTime && startTime > 4) {
+                            } else if 11 > startTime && startTime > 4 {
                                 AudioController.shared.controlAudio(forKey: "warning", enable: !muteSound)
                             } else if startTime == 0 {
                                 !muteSound ? AudioController.shared.controlAudio(forKey: "basic", enable: true) : AudioController.shared.controlAudio(forKey: "simple", enable: true)
