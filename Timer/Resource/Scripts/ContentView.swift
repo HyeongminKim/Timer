@@ -113,76 +113,22 @@ struct ContentView: View {
                         VStack {
                             Text("Choose Sounds".localized()).bold().padding().fixedSize().font(.largeTitle)
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "normal") ?? "Empty".localized())
-                                Spacer()
-                                Button(action: {
-                                    AudioController.shared.audioSelector(forKey: "normal")
-                                }, label: { Text("Normal Count".localized())})
-                                Button(action: {
-                                    AudioController.shared.audioDeleteSource(forKey: "normal")
-                                }, label: {
-                                    Text("CLR".localized())
-                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "normal"))
+                                chooseSounds(forKey: "normal", sourceBtn: "Normal Count")
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "approach") ?? "Empty".localized())
-                                Spacer()
-                                Button(action: {
-                                    AudioController.shared.audioSelector(forKey: "approach")
-                                }, label: { Text("1 min less".localized())})
-                                Button(action: {
-                                    AudioController.shared.audioDeleteSource(forKey: "approach")
-                                }, label: {
-                                    Text("CLR".localized())
-                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "approach"))
+                                chooseSounds(forKey: "approach", sourceBtn: "1 min less")
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "imminent") ?? "Empty".localized())
-                                Spacer()
-                                Button(action: {
-                                    AudioController.shared.audioSelector(forKey: "imminent")
-                                }, label: { Text("30 sec less".localized())})
-                                Button(action: {
-                                    AudioController.shared.audioDeleteSource(forKey: "imminent")
-                                }, label: {
-                                    Text("CLR".localized())
-                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "imminent"))
+                                chooseSounds(forKey: "imminent", sourceBtn: "30 sec less")
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "countDown") ?? "Empty".localized())
-                                Spacer()
-                                Button(action: {
-                                    AudioController.shared.audioSelector(forKey: "countDown")
-                                }, label: { Text("10 sec less".localized())})
-                                Button(action: {
-                                    AudioController.shared.audioDeleteSource(forKey: "countDown")
-                                }, label: {
-                                    Text("CLR".localized())
-                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "countDown"))
+                                chooseSounds(forKey: "countDown", sourceBtn: "10 sec less")
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "basic") ?? "Empty".localized())
-                                Spacer()
-                                Button(action: {
-                                    AudioController.shared.audioSelector(forKey: "basic")
-                                }, label: { Text("End Default".localized())})
-                                Button(action: {
-                                    AudioController.shared.audioDeleteSource(forKey: "basic")
-                                }, label: {
-                                    Text("CLR".localized())
-                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "basic"))
+                                chooseSounds(forKey: "basic", sourceBtn: "End Default")
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "simple") ?? "Empty".localized())
-                                Spacer()
-                                Button(action: {
-                                    AudioController.shared.audioSelector(forKey: "simple")
-                                }, label: { Text("End Simple".localized())})
-                                Button(action: {
-                                    AudioController.shared.audioDeleteSource(forKey: "simple")
-                                }, label: {
-                                    Text("CLR".localized())
-                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "simple"))
+                                chooseSounds(forKey: "simple", sourceBtn: "End Simple")
                             }
                             Spacer()
                             Button(action: {
@@ -267,6 +213,20 @@ struct ContentView: View {
                 .padding()
             }
         }.padding()
+    }
+
+    @ViewBuilder
+    private func chooseSounds(forKey: String, sourceBtn: String) -> some View {
+        Text(AudioController.shared.getAudioName(forKey: forKey) ?? "Empty".localized())
+        Spacer()
+        Button(action: {
+            AudioController.shared.audioSelector(forKey: forKey)
+        }, label: { Text(sourceBtn.localized())})
+        Button(action: {
+            AudioController.shared.audioDeleteSource(forKey: forKey)
+        }, label: {
+            Text("CLR".localized())
+        }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: forKey))
     }
 }
 
