@@ -23,6 +23,8 @@
 "1 min less" = "1 min less";
 "30 sec less" = "30 sec less";
 "10 sec less" = "10 sec less";
-"Timer End Default" = "Timer End Default";
-"Timer End Simple" = "Timer End Simple";
+"End Default" = "End Default";
+"End Simple" = "End Simple";
+"CLR" = "CLR";
+"Empty" = "[Empty]";
 "OK" = "OK";

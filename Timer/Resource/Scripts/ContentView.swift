@@ -113,46 +113,76 @@ struct ContentView: View {
                         VStack {
                             Text("Choose Sounds".localized()).bold().padding().fixedSize().font(.largeTitle)
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "normal") ?? "N/A")
+                                Text(AudioController.shared.getAudioName(forKey: "normal") ?? "Empty".localized())
                                 Spacer()
                                 Button(action: {
                                     AudioController.shared.audioSelector(forKey: "normal")
                                 }, label: { Text("Normal Count".localized())})
+                                Button(action: {
+                                    AudioController.shared.audioDeleteSource(forKey: "normal")
+                                }, label: {
+                                    Text("CLR".localized())
+                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "normal"))
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "approach") ?? "N/A")
+                                Text(AudioController.shared.getAudioName(forKey: "approach") ?? "Empty".localized())
                                 Spacer()
                                 Button(action: {
                                     AudioController.shared.audioSelector(forKey: "approach")
                                 }, label: { Text("1 min less".localized())})
+                                Button(action: {
+                                    AudioController.shared.audioDeleteSource(forKey: "approach")
+                                }, label: {
+                                    Text("CLR".localized())
+                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "approach"))
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "imminent") ?? "N/A")
+                                Text(AudioController.shared.getAudioName(forKey: "imminent") ?? "Empty".localized())
                                 Spacer()
                                 Button(action: {
                                     AudioController.shared.audioSelector(forKey: "imminent")
                                 }, label: { Text("30 sec less".localized())})
+                                Button(action: {
+                                    AudioController.shared.audioDeleteSource(forKey: "imminent")
+                                }, label: {
+                                    Text("CLR".localized())
+                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "imminent"))
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "countDown") ?? "N/A")
+                                Text(AudioController.shared.getAudioName(forKey: "countDown") ?? "Empty".localized())
                                 Spacer()
                                 Button(action: {
                                     AudioController.shared.audioSelector(forKey: "countDown")
                                 }, label: { Text("10 sec less".localized())})
+                                Button(action: {
+                                    AudioController.shared.audioDeleteSource(forKey: "countDown")
+                                }, label: {
+                                    Text("CLR".localized())
+                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "countDown"))
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "basic") ?? "N/A")
+                                Text(AudioController.shared.getAudioName(forKey: "basic") ?? "Empty".localized())
                                 Spacer()
                                 Button(action: {
                                     AudioController.shared.audioSelector(forKey: "basic")
-                                }, label: { Text("Timer End Default".localized())})
+                                }, label: { Text("End Default".localized())})
+                                Button(action: {
+                                    AudioController.shared.audioDeleteSource(forKey: "basic")
+                                }, label: {
+                                    Text("CLR".localized())
+                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "basic"))
                             }
                             HStack {
-                                Text(AudioController.shared.getAudioName(forKey: "simple") ?? "N/A")
+                                Text(AudioController.shared.getAudioName(forKey: "simple") ?? "Empty".localized())
                                 Spacer()
                                 Button(action: {
                                     AudioController.shared.audioSelector(forKey: "simple")
-                                }, label: { Text("Timer End Simple".localized())})
+                                }, label: { Text("End Simple".localized())})
+                                Button(action: {
+                                    AudioController.shared.audioDeleteSource(forKey: "simple")
+                                }, label: {
+                                    Text("CLR".localized())
+                                }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: "simple"))
                             }
                             Spacer()
                             Button(action: {
@@ -240,9 +270,7 @@ struct ContentView: View {
     }
 }
 
-private func didDismiss() {
-
-}
+private func didDismiss() { }
 
 extension Binding {
     func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {

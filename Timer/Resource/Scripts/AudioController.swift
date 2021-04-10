@@ -28,6 +28,16 @@ class AudioController {
         }
     }
 
+    public func audioDeleteSource(forKey: String) {
+        do {
+            let source = getAudioSource(forKey: forKey)
+            try FileManager.default.removeItem(at: source!)
+            UserDefaults.standard.removeObject(forKey: forKey)
+        } catch {
+            NSLog("Failed copy audioSource: \(error)")
+        }
+    }
+
     public func controlAudio(source: Int?, enable: Bool) {
         if (isAudioSourceEmpty()) { return }
 
@@ -51,9 +61,13 @@ class AudioController {
         }
     }
 
-    private func isAudioSourceEmpty() -> Bool {
+    public func isAudioSourceEmpty() -> Bool {
         getAudioSource(forKey: "normal")?.path.isEmpty ?? true || getAudioSource(forKey: "approach")?.path.isEmpty ?? true || getAudioSource(forKey: "imminent")?.path.isEmpty ?? true ||
                 getAudioSource(forKey: "countDown")?.path.isEmpty ?? true || getAudioSource(forKey: "basic")?.path.isEmpty ?? true || getAudioSource(forKey: "simple")?.path.isEmpty ?? true
+    }
+
+    public func isAudioSourceEmpty(forKey: String) -> Bool {
+        getAudioSource(forKey: forKey)?.path.isEmpty ?? true
     }
 
     private func getAudioSource(forKey: String) -> URL? {

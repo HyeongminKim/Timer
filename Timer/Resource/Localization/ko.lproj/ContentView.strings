@@ -23,6 +23,8 @@
 "1 min less" = "1 분 미만";
 "30 sec less" = "30 초 미만";
 "10 sec less" = "10 초 미만";
-"Timer End Default" = "기본 타이머 종료";
-"Timer End Simple" = "간략한 타이머 종료";
+"End Default" = "기본 종료";
+"End Simple" = "간략한 종료";
+"CLR" = "비우기";
+"Empty" = "[비어 있음]";
 "OK" = "승인";
