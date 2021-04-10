@@ -34,7 +34,10 @@ class AudioController {
             try FileManager.default.removeItem(at: source!)
             UserDefaults.standard.removeObject(forKey: forKey)
         } catch {
-            NSLog("Failed copy audioSource: \(error)")
+            NSLog("Failed delete audioSource: \(error)")
+            if UserDefaults.standard.string(forKey: forKey) != nil {
+                UserDefaults.standard.removeObject(forKey: forKey)
+            }
         }
     }
 

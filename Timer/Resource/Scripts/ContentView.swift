@@ -93,9 +93,9 @@ struct ContentView: View {
                             } else if startTime <= 3 {
                                 AudioController.shared.controlAudio(forKey: "imminent", enable: !muteSound)
                             } else if startTime <= 30 {
-                                AudioController.shared.controlAudio(forKey: "approach", enable: !muteSound && !(32 > startTime && startTime > 24 || 11 > startTime && startTime > 4))
+                                AudioController.shared.controlAudio(forKey: "approach", enable: !muteSound)
                             } else {
-                                AudioController.shared.controlAudio(forKey: "normal", enable: !muteSound && !(61 > startTime && startTime > 54))
+                                AudioController.shared.controlAudio(forKey: "normal", enable: !muteSound)
                             }
                         })
                     }, label: { Text("Start".localized()) }).disabled(startTime == 0)
