@@ -2,6 +2,7 @@
 ## This app is an easy-to-use timer.
 
 ### Customize timer sound
+- **Each sound file is recommended to be less than 1 second.**
 - Timer sound: You will hear what you set in Normal, 30 seconds or less, and 3 seconds or less.
 - Alert sound: The warning sound can be heard in 1 minute, 30 seconds and 10 seconds with the set sound.
 - Timer end sound: There are two types of timer end sound, normal sound and simple sound. Simple sound is used when the silent count function is turned on.
