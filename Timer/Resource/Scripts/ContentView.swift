@@ -112,24 +112,12 @@ struct ContentView: View {
                     }).sheet(isPresented: $sheetIsShowing, onDismiss: didDismiss) {
                         VStack {
                             Text("Choose Sounds".localized()).bold().padding().fixedSize().font(.largeTitle)
-                            HStack {
-                                chooseSounds(forKey: "normal", sourceBtn: "Normal Count")
-                            }
-                            HStack {
-                                chooseSounds(forKey: "approach", sourceBtn: "1 min less")
-                            }
-                            HStack {
-                                chooseSounds(forKey: "imminent", sourceBtn: "30 sec less")
-                            }
-                            HStack {
-                                chooseSounds(forKey: "countDown", sourceBtn: "10 sec less")
-                            }
-                            HStack {
-                                chooseSounds(forKey: "basic", sourceBtn: "End Default")
-                            }
-                            HStack {
-                                chooseSounds(forKey: "simple", sourceBtn: "End Simple")
-                            }
+                            chooseSounds(forKey: "normal", sourceBtn: "Normal Count")
+                            chooseSounds(forKey: "approach", sourceBtn: "1 min less")
+                            chooseSounds(forKey: "imminent", sourceBtn: "30 sec less")
+                            chooseSounds(forKey: "countDown", sourceBtn: "10 sec less")
+                            chooseSounds(forKey: "basic", sourceBtn: "End Default")
+                            chooseSounds(forKey: "simple", sourceBtn: "End Simple")
                             Spacer()
                             Button(action: {
                                 sheetIsShowing = false
@@ -217,16 +205,18 @@ struct ContentView: View {
 
     @ViewBuilder
     private func chooseSounds(forKey: String, sourceBtn: String) -> some View {
-        Text(AudioController.shared.getAudioName(forKey: forKey) ?? "Empty".localized())
-        Spacer()
-        Button(action: {
-            AudioController.shared.audioSelector(forKey: forKey)
-        }, label: { Text(sourceBtn.localized())})
-        Button(action: {
-            AudioController.shared.audioDeleteSource(forKey: forKey)
-        }, label: {
-            Text("CLR".localized())
-        }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: forKey))
+        HStack {
+            Text(AudioController.shared.getAudioName(forKey: forKey) ?? "Empty".localized())
+            Spacer()
+            Button(action: {
+                AudioController.shared.audioSelector(forKey: forKey)
+            }, label: { Text(sourceBtn.localized()) })
+            Button(action: {
+                AudioController.shared.audioDeleteSource(forKey: forKey)
+            }, label: {
+                Text("CLR".localized())
+            }).disabled(AudioController.shared.isAudioSourceEmpty(forKey: forKey))
+        }
     }
 }
 
