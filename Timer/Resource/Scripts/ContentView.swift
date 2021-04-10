@@ -34,7 +34,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if !setTimer {
-                Text("Timer set".localized()).bold().padding().fixedSize().font(.largeTitle)
+                Text("Set Timer".localized()).bold().padding().fixedSize().font(.largeTitle)
                 Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.gray)
                 HStack {
                     Picker(selection: $hour.onChange({ (Int) -> Void in
@@ -120,9 +120,9 @@ struct ContentView: View {
                             Text("Choose Sounds".localized()).bold().padding().fixedSize().font(.largeTitle)
                             Text("Timer Sound".localized())
                             Group {
-                                chooseSounds(forKey: "normal", sourceBtn: "Normal Count")
-                                chooseSounds(forKey: "approach", sourceBtn: "30 sec below")
-                                chooseSounds(forKey: "imminent", sourceBtn: "3 sec below")
+                                chooseSounds(forKey: "normal", sourceBtn: "Normal")
+                                chooseSounds(forKey: "approach", sourceBtn: "30 sec")
+                                chooseSounds(forKey: "imminent", sourceBtn: "3 sec")
                             }
                             Text("Alert Sound".localized())
                             Group {
@@ -132,8 +132,8 @@ struct ContentView: View {
                             }
                             Text("Timer End Sound".localized())
                             Group {
-                                chooseSounds(forKey: "basic", sourceBtn: "End Default")
-                                chooseSounds(forKey: "simple", sourceBtn: "End Simple")
+                                chooseSounds(forKey: "basic", sourceBtn: "Default")
+                                chooseSounds(forKey: "simple", sourceBtn: "Simple")
                             }
                             Spacer()
                             Button(action: {
@@ -145,9 +145,9 @@ struct ContentView: View {
                 .padding()
             } else {
                 if startTime != 0 {
-                    Text("Timer start".localized()).bold().padding().fixedSize().font(.largeTitle)
+                    Text("Start Timer".localized()).bold().padding().fixedSize().font(.largeTitle)
                 } else {
-                    Text("Timer done".localized()).bold().padding().fixedSize().font(.largeTitle)
+                    Text("Done Timer".localized()).bold().padding().fixedSize().font(.largeTitle)
                 }
                 if startTime % 2 == 0 {
                     if 62 > startTime && startTime > 54 {

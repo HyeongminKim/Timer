@@ -1,7 +1,7 @@
 /****************************************************************************/
 /* Localization file */
 
-"Timer set" = "타이머 설정";
+"Set Timer" = "타이머 설정";
 "h" = "시";
 "m" = "분";
 "s" = "초";
@@ -12,24 +12,24 @@
 "Reset" = "초기화";
 "Choose Sounds..." = "사운드 선택...";
 
-"Timer start" = "타이머 시작";
-"Timer done" = "타이머 완료";
+"Start Timer" = "타이머 시작";
+"Done Timer" = "타이머 완료";
 "Stop" = "정지";
 "Back" = "이전";
 "Pause" = "일시 정지";
 
 "Choose Sounds" = "사운드 선택";
 "Timer Sound" = "타이머 사운드";
-"Normal Count" = "일반 카운트";
-"30 sec below" = "30초 이하";
-"3 sec below" = "3초 이하";
+"Normal" = "일반";
+"30 sec" = "30초";
+"3 sec" = "3초";
 "Alert Sound" = "경고 사운드";
 "1 min" = "1분";
 "30 sec" = "30초";
 "10 sec" = "10초";
 "Timer End Sound" = "타이머 종료 사운드";
-"End Default" = "기본 종료";
-"End Simple" = "간략한 종료";
+"Default" = "기본";
+"Simple" = "간단";
 "CLR" = "비우기";
 "Empty" = "[비어 있음]";
 "OK" = "승인";
