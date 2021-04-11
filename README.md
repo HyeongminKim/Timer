@@ -1,5 +1,6 @@
 # Timer
 ## This app is an easy-to-use timer.
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/hmDonate)
 
 ### Customize timer sound
 - **Each Timer sound and Alert sound files are recommended to be less than 1 second.**
