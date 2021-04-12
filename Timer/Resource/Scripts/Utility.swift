@@ -3,7 +3,24 @@
 // Copyright (c) 2021 HM. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+public extension Binding {
+    func onChange(_ handler: @escaping (Value) -> Void) -> Binding<Value> {
+        return Binding(
+                get: { wrappedValue },
+                set: { selection in
+                    wrappedValue = selection
+                    handler(selection)
+                })
+    }
+}
+
+public extension String {
+    func localized(bundle: Bundle = .main, tableName: String = "ContentView") -> String {
+        return NSLocalizedString(self, tableName: tableName, value: "**\(self)**", comment: "")
+    }
+}
 
 class Utility {
     static let shared = Utility()
