@@ -126,33 +126,7 @@ struct ContentView: View {
                 } else {
                     Text("Done Timer".localized()).bold().padding().fixedSize().font(.largeTitle)
                 }
-                if startTime % 2 == 0 {
-                    if 62 > startTime && startTime > 54 {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
-                    } else if 32 > startTime && startTime > 24 {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
-                    } else if 12 > startTime && startTime > 4 {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
-                    } else if 4 > startTime && startTime > 0 {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
-                    } else if startTime == 0 {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).background(Color.red)
-                    } else {
-                        if 10 > startTime && startTime > 0 {
-                            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.orange)
-                        } else {
-                            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title)
-                        }
-                    }
-                } else {
-                    if 4 > startTime && startTime > 0 {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title).foregroundColor(.red)
-                    } else if 10 > startTime && startTime > 0 {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title).foregroundColor(.orange)
-                    } else {
-                        Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title)
-                    }
-                }
+                TimerLabelColorSetter(startTime: startTime)
                 HStack {
                     Text("ETA: ")
                     if (startTime == 0) {
@@ -199,6 +173,37 @@ struct ContentView: View {
                 .padding()
             }
         }.padding()
+    }
+}
+
+@ViewBuilder
+private func TimerLabelColorSetter(startTime: Int) -> some View {
+    if startTime % 2 == 0 {
+        if 62 > startTime && startTime > 54 {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
+        } else if 32 > startTime && startTime > 24 {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
+        } else if 12 > startTime && startTime > 4 {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
+        } else if 4 > startTime && startTime > 0 {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.red)
+        } else if startTime == 0 {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).background(Color.red)
+        } else {
+            if 10 > startTime && startTime > 0 {
+                Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.orange)
+            } else {
+                Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title)
+            }
+        }
+    } else {
+        if 4 > startTime && startTime > 0 {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title).foregroundColor(.red)
+        } else if 10 > startTime && startTime > 0 {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title).foregroundColor(.orange)
+        } else {
+            Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: false)).font(.title)
+        }
     }
 }
 
