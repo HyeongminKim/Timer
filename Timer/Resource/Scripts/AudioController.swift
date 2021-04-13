@@ -15,6 +15,8 @@ class AudioController {
         dialog.showsResizeIndicator = true
         dialog.showsHiddenFiles = false
         dialog.allowsMultipleSelection = false
+        dialog.allowedFileTypes = ["aac", "aiff", "mp3", "m4a"]
+        dialog.allowsOtherFileTypes = false
         dialog.canChooseDirectories = false
 
         if (dialog.runModal() != NSApplication.ModalResponse.OK) { return }
