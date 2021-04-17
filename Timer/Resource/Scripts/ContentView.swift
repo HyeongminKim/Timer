@@ -129,7 +129,7 @@ struct ContentView: View {
                 TimerLabelColorSetter(startTime: startTime)
                 HStack {
                     Text("ETA: ")
-                    if (startTime == 0) {
+                    if startTime == 0 {
                         Text(Utility.shared.convertDate(inputTime: setTime, secEnable: true)).strikethrough(true).foregroundColor(Color.gray)
                     } else {
                         Text(Utility.shared.convertDate(inputTime: setTime, secEnable: true)).strikethrough(false)

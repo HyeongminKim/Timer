@@ -19,7 +19,7 @@ class AudioController {
         dialog.allowsOtherFileTypes = false
         dialog.canChooseDirectories = false
 
-        if (dialog.runModal() != NSApplication.ModalResponse.OK) { return }
+        if dialog.runModal() != NSApplication.ModalResponse.OK { return }
 
         do {
             let documentDir = Utility.shared.getDocumentsDir()
@@ -44,7 +44,7 @@ class AudioController {
     }
 
     public func controlAudio(forKey: String?, enable: Bool) {
-        if (isAudioSourceEmpty()) { return }
+        if isAudioSourceEmpty() { return }
 
         switch forKey {
         case "normal": do { sound = try AVAudioPlayer(contentsOf: getAudioSource(forKey: "normal")!) } catch { NSLog("No audio source.") }
