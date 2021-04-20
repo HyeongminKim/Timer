@@ -2,9 +2,9 @@
 /* Localization file */
 
 "Set Timer" = "Set Timer";
-"h" = "h";
-"m" = "m";
-"s" = "s";
+"hour" = "hour";
+"min" = "min";
+"sec" = "sec";
 "ETA: " = "ETA: ";
 "N/A" = "N/A";
 "Silent count" = "Silent count";

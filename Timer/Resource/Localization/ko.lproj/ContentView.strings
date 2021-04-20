@@ -2,9 +2,9 @@
 /* Localization file */
 
 "Set Timer" = "타이머 설정";
-"h" = "시";
-"m" = "분";
-"s" = "초";
+"hour" = "시";
+"min" = "분";
+"sec" = "초";
 "ETA: " = "ETA: ";
 "N/A" = "알 수 없음";
 "Silent count" = "무음 카운트";

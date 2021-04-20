@@ -2,9 +2,9 @@
 /* Localization file */
 
 "Set Timer" = "タイマーセット";
-"h" = "詩";
-"m" = "分";
-"s" = "秒";
+"hour" = "詩";
+"min" = "分";
+"sec" = "秒";
 "ETA: " = "ETA: ";
 "N/A" = "闇夜に鉄砲";
 "Silent count" = "無音カウント";

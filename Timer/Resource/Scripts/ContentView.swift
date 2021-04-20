@@ -25,42 +25,26 @@ struct ContentView: View {
 
     @State public var sheetIsShowing = false
 
-    let h = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
-    let m = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
-             24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45,
-             46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]
-    let s = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
-    
     var body: some View {
         VStack {
             if !setTimer {
                 Text("Set Timer".localized()).bold().padding().fixedSize().font(.largeTitle)
                 Text(Utility.shared.convertTime(inputTime: startTime, dotEnable: true)).font(.title).foregroundColor(.gray)
                 HStack {
-                    Picker(selection: $hour.onChange({ (Int) -> Void in
-                            now = Date()
-                            startTime = hour * 3600 + minute * 60 + second
-                        }), label: Text("h".localized())) {
-                        ForEach(h, id: \.self) { h_set in
-                            Text("\(h_set)").tag(h_set + 1000)
-                        }
-                    }.fixedSize()
-                    Picker(selection: $minute.onChange({ (Int) -> Void in
-                            now = Date()
-                            startTime = hour * 3600 + minute * 60 + second
-                        }), label: Text("m".localized())) {
-                        ForEach(m, id: \.self) { m_set in
-                            Text("\(m_set)").tag(m_set + 100)
-                        }
-                    }.fixedSize()
-                    Picker(selection: $second.onChange({ (Int) -> Void in
-                            now = Date()
-                            startTime = hour * 3600 + minute * 60 + second
-                        }), label: Text("s".localized())) {
-                        ForEach(s, id: \.self) { s_set in
-                            Text("\(s_set)").tag(s_set)
-                        }
-                    }.fixedSize()
+                    TextField("hour".localized(), value: $hour, formatter: NumberFormatter(), onCommit: {
+                        now = Date()
+                        startTime = hour * 3600 + minute * 60 + second
+                    })
+                    Text(":")
+                    TextField("min".localized(), value: $minute, formatter: NumberFormatter(), onCommit: {
+                        now = Date()
+                        startTime = hour * 3600 + minute * 60 + second
+                    })
+                    Text(":")
+                    TextField("sec".localized(), value: $second, formatter: NumberFormatter(), onCommit: {
+                        now = Date()
+                        startTime = hour * 3600 + minute * 60 + second
+                    })
                 }
                 HStack {
                     Text("ETA: ".localized())
