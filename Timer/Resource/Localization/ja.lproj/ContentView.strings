@@ -1,0 +1,34 @@
+/****************************************************************************/
+/* Localization file */
+
+"Set Timer" = "タイマーセット";
+"h" = "詩";
+"m" = "分";
+"s" = "秒";
+"ETA: " = "ETA: ";
+"N/A" = "闇夜に鉄砲";
+"Silent count" = "無音カウント";
+"Start" = "スタート";
+"Reset" = "リセット";
+"Choose Sounds..." = "サウンド選択。。。";
+
+"Start Timer" = "タイマースタート";
+"Done Timer" = "タイマー終了";
+"Stop" = "停止";
+"Back" = "以前";
+"Pause" = "一時停止";
+
+"Choose Sounds" = "サウンド選択";
+"Timer Sound" = "タイマーサウンド";
+"Normal" = "一般";
+"30 sec" = "30秒";
+"3 sec" = "3秒";
+"Alert Sound" = "警告サウンド";
+"1 min" = "1分";
+"10 sec" = "10秒";
+"Timer End Sound" = "タイマー終了サウンド";
+"Default" = "基本";
+"Simple" = "簡単";
+"CLR" = "クリアー";
+"Empty" = "[空き]";
+"OK" = "承認";
