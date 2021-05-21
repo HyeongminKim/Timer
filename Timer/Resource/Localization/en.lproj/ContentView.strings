@@ -12,8 +12,8 @@
 "Reset" = "Reset";
 "Choose Sounds..." = "Choose Sounds...";
 
-"Start Timer" = "Start Timer";
-"Done Timer" = "Done Timer";
+"Start Timer" = "Timer start";
+"Done Timer" = "Timer done";
 "Stop" = "Stop";
 "Back" = "Back";
 "Pause" = "Pause";
@@ -29,6 +29,6 @@
 "Timer End Sound" = "Timer End Sound";
 "Default" = "Default";
 "Simple" = "Simple";
-"CLR" = "CLR";
+"CLR" = "Clear";
 "Empty" = "[Empty]";
 "OK" = "OK";
